@@ -14,11 +14,11 @@ const axios = require('axios');
 const crypto = require('crypto');
 
 const app = express();
-app.use(cors());
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 // ─── Ob-havo API (OpenWeatherMap) ───────────────────────
-const WEATHER_API_KEY = process.env.WEATHER_API_KEY || 'YOUR_OPENWEATHER_KEY';
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY || '5c2cd8324b3695b36c6f6681d0498111';
 
 // ─── Stansiya konfiguratsiyasi (keyinchalik DB ga o'tadi) ─
 let stationConfig = {
