@@ -23,7 +23,7 @@ const WEATHER_API_KEY = process.env.WEATHER_API_KEY || '5c2cd8324b3695b36c6f6681
 // ─── Stansiya konfiguratsiyasi (keyinchalik DB ga o'tadi) ─
 let stationConfig = {
   name: 'Toshkent Quyosh Stansiyasi',
-  location: { lat: 41.2995, lon: 69.2401, city: 'Toshkent' },
+  location: { lat: 38.6169, lon: 66.2472, city: "G'uzor" },
   totalPanels: 48,
   rows: 6,
   panelsPerRow: 8,
@@ -182,7 +182,7 @@ async function getWeather(lat, lon) {
       description: w.weather[0].description,
       clouds: w.clouds.all,
       wind_speed: w.wind.speed,
-      solar_radiation: Math.round((1 - w.clouds.all / 100) * 1000),
+      solar_radiation: Math.round((1 - w.clouds.all / 100) * 1000 * Math.max(0, Math.sin((new Date().getHours() - 6) / 13 * Math.PI))),
       uv_index: Math.round((1 - w.clouds.all / 100) * 10),
       icon: w.weather[0].icon,
       forecast: forecast.data.list
