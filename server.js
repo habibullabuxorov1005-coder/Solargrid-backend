@@ -22,7 +22,7 @@ const WEATHER_API_KEY = process.env.WEATHER_API_KEY || '5c2cd8324b3695b36c6f6681
 
 // ─── Stansiya konfiguratsiyasi (keyinchalik DB ga o'tadi) ─
 let stationConfig = {
-  name: 'Toshkent Quyosh Stansiyasi',
+  name: "G'uzor Quyosh Stansiyasi",
   location: { lat: 38.6169, lon: 66.2472, city: "G'uzor" },
   totalPanels: 48,
   rows: 6,
