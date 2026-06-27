@@ -1,6 +1,6 @@
 {
-  "name": "solargrid-api",
-  "version": "1.0.0",
+  "name": "solargrid-universal-api",
+  "version": "2.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
